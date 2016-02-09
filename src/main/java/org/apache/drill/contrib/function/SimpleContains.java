@@ -41,7 +41,7 @@ public class SimpleContains implements DrillSimpleFunc {
         // does it matches ?
         java.util.regex.Pattern p = java.util.regex.Pattern.compile(patternValue);
         java.util.regex.Matcher m = p.matcher(stringValue);
-        boolean b = m.matches();
+        boolean b = m.find();
         int result = b ? 1 : 0;
 
         // put the output value in the out buffer
